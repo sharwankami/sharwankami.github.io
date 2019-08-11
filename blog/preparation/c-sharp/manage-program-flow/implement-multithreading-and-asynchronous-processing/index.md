@@ -1,0 +1,1 @@
+Use the Task Parallel library, including theParallel.For method, PLINQ, Tasks;create continuation tasks; spawn threads by using ThreadPool; unblock the UI; use async and await keywords; manage data by using concurrent collections

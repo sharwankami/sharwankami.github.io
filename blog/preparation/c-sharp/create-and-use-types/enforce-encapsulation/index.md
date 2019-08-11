@@ -1,0 +1,1 @@
+Enforce encapsulation by using properties; enforce encapsulation by using accessors, including public, private, protected, and internal; enforce encapsulation by using explicit interface implementation
