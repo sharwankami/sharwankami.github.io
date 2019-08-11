@@ -2,29 +2,29 @@
 ---
 
 
-Manage Program Flow
-	[Implement multithreading and asynchronous processing](./manage-program-flow/implement-multithreading-and-asynchronous-processing/)
-	[Manage multithreading](./manage-program-flow/manage-multithreading/)
-	[Implement program flow](./manage-program-flow/implement-program-flow/)
-	[Create and implement events and callbacks](./manage-program-flow/create-and-implement-events-and-callbacks/)
-	[Implement exception handling](./manage-program-flow/implement-exception-handling/)
-Create and Use Types
-	[Create types](./create-and-use-types/create-types/)
-	[Consume types](./create-and-use-types/consume-types/)
-	[Enforce encapsulation](./create-and-use-types/enforce-encapsulation/)
-	[Create and implement a class hierarchy](./create-and-use-types/create-and-implement-a-class-hierarchy/)
-	[Find, execute, and create types at runtime by using reflection](./create-and-use-types/find-execute-and-create-types-at-runtime-by-reflection/)
-	[Manage the object life cycle](./create-and-use-types/manage-object-lifecycle/)
-	[Manipulate strings](./create-and-use-types/manipulate-strings/)
-Debug Applications and Implement Security
-	[Validate application input](./debug-applications-and-implement-security/validate-application-input/)
-	[Perform symmetric and asymmetric encryption](./debug-applications-and-implement-security/perform-symmetric-and-asymmetric-encryption/)
-	[Manage assemblies](./debug-applications-and-implement-security/manage-assemblies/)
-	[Debug an application](./debug-applications-and-implement-security/debug-an-application/)
-	[Implement diagnostics in an application](./debug-applications-and-implement-security/implement-diagnostics-in-an-application/)
-Implement Data Access
-	[Perform I/O operations](./implement-data-access/perform-io-operations/)
-	[Consume data](./implement-data-access/consume-data/)
-	[Query and manipulate data and objects by using LINQ](./implement-data-access/query-and-manipulate-data-and-objects-by-using-linq/)
-	[Serialize and deserialize data](./implement-data-access/serialize-and-deserialize-data/)
-	[Store data in and retrieve data from collections](./implement-data-access/store-data-in-and-retrieve-data-from-collections/)
+* Manage Program Flow
+	* [Implement multithreading and asynchronous processing](./manage-program-flow/implement-multithreading-and-asynchronous-processing/)
+	* [Manage multithreading](./manage-program-flow/manage-multithreading/)
+	* [Implement program flow](./manage-program-flow/implement-program-flow/)
+	* [Create and implement events and callbacks](./manage-program-flow/create-and-implement-events-and-callbacks/)
+	* [Implement exception handling](./manage-program-flow/implement-exception-handling/)
+* Create and Use Types
+	* [Create types](./create-and-use-types/create-types/)
+	* [Consume types](./create-and-use-types/consume-types/)
+	* [Enforce encapsulation](./create-and-use-types/enforce-encapsulation/)
+	* [Create and implement a class hierarchy](./create-and-use-types/create-and-implement-a-class-hierarchy/)
+	* [Find, execute, and create types at runtime by using reflection](./create-and-use-types/find-execute-and-create-types-at-runtime-by-reflection/)
+	* [Manage the object life cycle](./create-and-use-types/manage-object-lifecycle/)
+	* [Manipulate strings](./create-and-use-types/manipulate-strings/)
+* Debug Applications and Implement Security
+	* [Validate application input](./debug-applications-and-implement-security/validate-application-input/)
+	* [Perform symmetric and asymmetric encryption](./debug-applications-and-implement-security/perform-symmetric-and-asymmetric-encryption/)
+	* [Manage assemblies](./debug-applications-and-implement-security/manage-assemblies/)
+	* [Debug an application](./debug-applications-and-implement-security/debug-an-application/)
+	* [Implement diagnostics in an application](./debug-applications-and-implement-security/implement-diagnostics-in-an-application/)
+* Implement Data Access
+	* [Perform I/O operations](./implement-data-access/perform-io-operations/)
+	* [Consume data](./implement-data-access/consume-data/)
+	* [Query and manipulate data and objects by using LINQ](./implement-data-access/query-and-manipulate-data-and-objects-by-using-linq/)
+	* [Serialize and deserialize data](./implement-data-access/serialize-and-deserialize-data/)
+	* [Store data in and retrieve data from collections](./implement-data-access/store-data-in-and-retrieve-data-from-collections/)
