@@ -10,7 +10,7 @@ const App = (props) => {
                     height={'120px'}
                     style={{ marginBottom: '30px' }}
                 />
-                <h1 style={{ fontSize: '70px' }}>Sharwan Kami</h1>
+                <h1 style={{ fontSize: '60px' }}>Sharwan Kami</h1>
                 <p>I am Senios Web Developer at Samnet.no, living in Norway.</p>
             </div>
         </div>
