@@ -44,6 +44,11 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /static[/\\][^/\\]+\.svg$/,
+                    type: 'asset/inline',
+                    exclude: /static[/\\][^/\\]+\.svg$/
+                },
+                {
+                    test: /static[/\\][^/\\]+\.svg$/,
                     issuer: /\.[jt]sx?$/,
                     use: ['@svgr/webpack'],
                 },

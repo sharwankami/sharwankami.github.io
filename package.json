@@ -20,8 +20,14 @@
     },
     "homepage": "https://github.com/sharwankami/sharwankami.github.io#readme",
     "dependencies": {
+        "@emotion/react": "^11.10.0",
+        "@emotion/styled": "^11.10.0",
+        "@mui/icons-material": "^5.8.4",
+        "@mui/material": "^5.9.2",
         "@popperjs/core": "^2.11.5",
         "bootstrap": "^5.2.0",
+        "install": "^0.13.0",
+        "npm": "^8.15.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
@@ -42,6 +48,7 @@
         "raw-loader": "^4.0.2",
         "sass": "^1.54.0",
         "sass-loader": "^13.0.2",
+        "url-loader": "^4.1.1",
         "webpack": "^5.74.0",
         "webpack-cli": "^4.10.0",
         "webpack-dev-server": "^4.9.3"
