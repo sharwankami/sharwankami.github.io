@@ -6,6 +6,10 @@ import {Link} from "@mui/icons-material";
 import {Button} from "@mui/material";
 
 const App = (props) => {
+    const links=[
+        {url:"https://www.linkedin.com/in/sharwan/", title:"", icon:<LinkedInIcon />},
+        {url:"https://github.com/sharwankami/sharwankami.github.io/", title:"", icon:<GitHubIcon />},
+    ];
     return (
         <div className={'container text-center pt-5 align-middle'}>
             <div className="">
@@ -16,21 +20,16 @@ const App = (props) => {
                 />
                 <h1 style={{ fontSize: '60px' }}>Sharwan Kami</h1>
                 <p>I am Senios Web Developer at Samnet.no, living in Norway.</p>
-                <p>
-                    <Button
-                        variant="link"
-                        color="default"
-                        startIcon={<LinkedInIcon />}
-                        href="https://www.linkedin.com/in/sharwan/"
-                    />
 
-                    <Button
-                        variant="link"
-                        color="default"
-                        startIcon={<GitHubIcon />}
-                        href="https://github.com/sharwankami/sharwankami.github.io/"
-                    />
-                </p>
+                <ul className={"nav justify-content-center"}>
+                    {
+                        links.map((lnk, index)=>{
+                            return <li className={"nav-item"}>
+                                <a href={lnk.url} className="nav-link text-black-50" title={lnk.title} target={"_blank"}>{lnk.icon}</a>
+                            </li>
+                        })
+                    }
+                </ul>
             </div>
         </div>
     )
