@@ -3,72 +3,80 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 
-module.exports = {
-    mode: 'development',
-    entry: './src/index.js',
-    output: {
-        path: path.resolve(__dirname, 'public/assets'),
-        filename: '[name].[contenthash:6].js',
-        clean: true,
-    },
-    resolve: {
-        extensions: ['.js', '.jsx'],
-    },
-    devServer: {
-        static: {
-            directory: path.join(__dirname, 'public'),
+module.exports = (env, argv) => {
+    return {
+        mode:
+            typeof argv.mode !== 'undefined' && argv.mode === 'production'
+                ? 'production'
+                : 'development',
+        entry: './src/index.js',
+        output: {
+            path: path.resolve(__dirname, 'assets'),
+            filename: '[name].[contenthash:6].js',
+            clean: true,
         },
-        devMiddleware: {
-            writeToDisk: true,
+        resolve: {
+            extensions: ['.js', '.jsx'],
         },
-        compress: true,
-        port: 9000,
-    },
-    module: {
-        rules: [
-            {
-                test: /\.jsx?$/,
-                loader: 'babel-loader',
+        devServer: {
+            static: {
+                directory: path.join(__dirname, ''),
             },
-            {
-                test: /\.(scss|css)$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+            devMiddleware: {
+                writeToDisk: true,
             },
-            {
-                test: /static[/\\][^/\\]+\.svg$/,
-                issuer: /\.[jt]sx?$/,
-                use: ['@svgr/webpack'],
-            },
-        ],
-    },
-    plugins: [
-        new CopyPlugin({
-            patterns: [
-                { from: 'static/assets/images', to: 'images' },
+            compress: true,
+            port: 9000,
+        },
+        module: {
+            rules: [
                 {
-                    from: 'static/assets/images/apple-touch-icon.png',
-                    to: path.resolve(__dirname, 'public/favicon.png'),
+                    test: /\.jsx?$/,
+                    loader: 'babel-loader',
+                },
+                {
+                    test: /\.(scss|css)$/,
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        'css-loader',
+                        'sass-loader',
+                    ],
+                },
+                {
+                    test: /static[/\\][^/\\]+\.svg$/,
+                    issuer: /\.[jt]sx?$/,
+                    use: ['@svgr/webpack'],
                 },
             ],
-        }),
-        new MiniCssExtractPlugin({
-            filename: '[name].[contenthash:6].css',
-        }),
-        new HtmlWebpackPlugin({
-            meta: {
-                title: 'Sharwan Kami | Web &amp; Mobile App Developer from Sarpsborg, Norway',
-                charset: 'UTF-8',
-                viewport:
-                    'width=device-width, initial-scale=1, shrink-to-fit=no',
-                'theme-color': '#000',
-                description:
-                    'Sharwan is an experienced web and mobile application developer.',
-                author: 'Sharwan Kami <sharwan@gmail.com>',
-                keywords:
-                    'Sharwan Kami, sharwan, react, react.js, nodejs, typescript, javascript, php, api, developer, portfolio, website design, css, web design, interactive, ia, ux, usability',
-            },
-            inject: 'body',
-            templateContent: ({ htmlWebpackPlugin }) => `<!DOCTYPE html>
+        },
+        plugins: [
+            new CopyPlugin({
+                patterns: [
+                    { from: 'static/assets/images', to: 'images' },
+                    {
+                        from: 'static/assets/images/apple-touch-icon.png',
+                        to: path.resolve(__dirname, 'favicon.png'),
+                    },
+                ],
+            }),
+            new MiniCssExtractPlugin({
+                filename: '[name].[contenthash:6].css',
+            }),
+            new HtmlWebpackPlugin({
+                meta: {
+                    title: 'Sharwan Kami | Web &amp; Mobile App Developer from Sarpsborg, Norway',
+                    charset: 'UTF-8',
+                    viewport:
+                        'width=device-width, initial-scale=1, shrink-to-fit=no',
+                    'theme-color': '#000',
+                    description:
+                        'Sharwan is an experienced web and mobile application developer.',
+                    author: 'Sharwan Kami <sharwan@gmail.com>',
+                    keywords:
+                        'Sharwan Kami, sharwan, react, react.js, nodejs, typescript, javascript, php, api, developer, portfolio, website design, css, web design, interactive, ia, ux, usability',
+                },
+                inject: 'body',
+                templateContent: ({ htmlWebpackPlugin }) => `<!DOCTYPE html>
             <html lang="en">
             <head>
                 ${htmlWebpackPlugin.tags.headTags}
@@ -83,7 +91,8 @@ module.exports = {
                 ${htmlWebpackPlugin.tags.bodyTags}
             </body>
             </html>`,
-            filename: '../index.html',
-        }),
-    ],
+                filename: '../index.html',
+            }),
+        ],
+    }
 }
