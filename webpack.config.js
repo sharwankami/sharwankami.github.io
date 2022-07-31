@@ -68,8 +68,8 @@ module.exports = (env, argv) => {
                 filename: '[name].[contenthash:6].css',
             }),
             new HtmlWebpackPlugin({
+                title:'',
                 meta: {
-                    title: 'Sharwan Kami | Web &amp; Mobile App Developer from Sarpsborg, Norway',
                     charset: 'UTF-8',
                     viewport:
                         'width=device-width, initial-scale=1, shrink-to-fit=no',
@@ -84,7 +84,7 @@ module.exports = (env, argv) => {
                 templateContent: ({ htmlWebpackPlugin }) => `<!DOCTYPE html>
             <html lang="en">
             <head>
-                ${htmlWebpackPlugin.tags.headTags}
+                <title>Sharwan Kami | Web Developer from Viken, Norway</title>
                 <link rel="icon" type="image/png" href="favicon.png" />
                 <link rel="manifest" href="assets/images/manifest.json">
                 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,7 +93,6 @@ module.exports = (env, argv) => {
             </head>
             <body>
                 <div id="sk-app">Welcome!</div>
-                ${htmlWebpackPlugin.tags.bodyTags}
             </body>
             </html>`,
                 filename: '../index.html',

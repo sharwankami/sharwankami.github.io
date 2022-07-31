@@ -24,7 +24,7 @@ const App = (props) => {
                 <ul className={"nav justify-content-center"}>
                     {
                         links.map((lnk, index)=>{
-                            return <li className={"nav-item"}>
+                            return <li key={"link-"+index} className={"nav-item"}>
                                 <a href={lnk.url} className="nav-link text-black-50" title={lnk.title} target={"_blank"}>{lnk.icon}</a>
                             </li>
                         })
