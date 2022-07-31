@@ -92,7 +92,7 @@ module.exports = (env, argv) => {
                 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
             </head>
             <body>
-                <div id="sk-app">this is body</div>
+                <div id="sk-app">Welcome</div>
                 ${htmlWebpackPlugin.tags.bodyTags}
             </body>
             </html>`,
