@@ -19,7 +19,7 @@ const App = (props) => {
                     style={{ marginBottom: '30px' }}
                 />
                 <h1 style={{ fontSize: '60px' }}>Sharwan Kami</h1>
-                <p>I am Senior Web Developer at <a href="https://digitive.no">Digitive AS</a>, living in Moss, Norway.</p>
+                <p>I am Senior Web Developer at <a href="https://brandsafe.no">Brandsafe</a>, living in Moss, Norway.</p>
 
                 <ul className={"nav justify-content-center"}>
                     {
